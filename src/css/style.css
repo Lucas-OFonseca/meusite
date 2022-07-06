@@ -1,0 +1,196 @@
+/* GERAL ------------------------------------------------ */
+html,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Todos os links mudam o mouse para pointer */
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background-color: #1b1b1b;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+/* HEADER ------------------------------------------------ */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  padding: 0 15%;
+  display: flex;
+  align-items: center;
+  background-color: #151515;
+  border-bottom: 2px solid #272727;
+  font: larger;
+  font-weight: bold;
+  height: 80px;
+}
+
+div#logo1 {
+  width: 100%;
+  padding: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a#logo {
+  font-size: 1.3rem;
+  width: 100%;
+  color: #651fff;
+}
+
+a#logo:hover {
+  color: #9c27b0;
+  transition: 0.3s;
+}
+
+#menu {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px 30px;
+  color: #c4c4c4;
+}
+
+nav ul li:hover {
+  color: #651fff;
+  transition: 0.3s;
+}
+
+/* CORPO ------------------------------------------------ */
+main {
+  display: block;
+  color: #c4c4c4;
+}
+
+.principal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  min-height: 60vh;
+}
+
+.principal,
+.about,
+.experiencia,
+.projetos {
+  padding: 6.5% 15%;
+  min-height: 35vh;
+}
+
+.principal span {
+  font-size: 3rem;
+  color: #651fff;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: -webkit-radial-gradient(#651fff, #2b2b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.principal h1 {
+  text-transform: uppercase;
+  margin: 1.5rem 0 1.5rem 0rem;
+}
+
+.principal_name {
+  display: flex;
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  animation: typingblink 500ms infinite alternate, typing 5s normal;
+  justify-content: center;
+}
+
+.principal_right {
+  width: 40%;
+  margin: 2rem 0;
+  display: flex;
+}
+
+/* Keyframes Typing */
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typingblink {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 1325px) {
+  .principal h1 {
+    font-size: 1rem;
+  }
+  .principal span {
+    font-size: 2.2rem;
+  }
+
+  .principal_right {
+    width: 80%;
+  }
+
+  .principal,
+  .about,
+  .experiencia,
+  .projetos {
+  }
+}
+
+@media (max-width: 880px) {
+  .navbar-toggler {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
+  .principal_right {
+    display: none;
+  }
+  #navbar.active #menu {
+    display: flex;
+  }
+  .principal_name {
+    justify-content: center;
+  }
+  .principal,
+  .sobre-mim,
+  .experiencia,
+  .projetos {
+    padding: 25% 0;
+    text-align: center;
+  }
+  .principal span {
+    font-size: 1.8rem;
+  }
+}
