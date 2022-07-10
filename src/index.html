@@ -12,6 +12,10 @@
     />
     <title>Lucas Fonseca</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <script src="./js/scripts.js" defer></script>
   </head>
 
@@ -23,9 +27,16 @@
       <nav id="navbar">
         <div id="logo1">
           <a id="logo" href="#home">&lt;Lucas/&gt;</a>
-          <!-- Button para Mobile -->
-          <button class="navbar-toggler">Menu</button>
         </div>
+
+        <!-- Button para Mobile -->
+        <button
+          id="navbar-toggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span id="navbar-toggler-icon">|||</span>
+        </button>
 
         <ul data-menu="list" id="menu">
           <a href="#home">
@@ -43,15 +54,39 @@
         </ul>
       </nav>
     </header>
+
     <!-- Main -->
     <main>
+      <!-- Home -->
       <section class="principal" id="home">
         <div class="principal_left">
           <h1>
             Olá Mundo! Me chamo
-            <br><br><span class="principal_name">Lucas Fonseca</span><br>
+            <br /><br /><span class="principal_name">Lucas Fonseca</span><br />
             Desenvolvedor Front-End
           </h1>
+          <div class="btn_principal">
+            <a href="https://github.com/lucas-ofonseca" target="_blank"
+              ><div id="btn_git">
+                <img
+                  class="img_btn"
+                  src="./img/github.svg"
+                  alt="logo do Github"
+                />Github
+              </div></a
+            >
+            <a
+              href="https://www.linkedin.com/in/lucas-ofonseca/"
+              target="_blank"
+              ><div id="btn_linkedin">
+                <img
+                  class="img_btn"
+                  src="./img/linkedin.svg"
+                  alt="logo do linkedin"
+                />LinkedIn
+              </div></a
+            >
+          </div>
         </div>
 
         <div class="principal_right">
@@ -62,6 +97,31 @@
           />
         </div>
       </section>
+
+      <!-- Sobre mim -->
+      <section class="about" id="about">
+        <div class="img_about">
+          <img id="img_eu" src="./img/eu.png" alt="Uma foto minha" />
+        </div>
+        <div class="sobre">
+          <h2>Sobre mim</h2>
+          <br />
+          <p>
+            Tenho 21 anos e sou de Sabará, Minas Gerais. Atualmente trabalho
+            como faturista e estou em transição de carreira com dedicação nos
+            estudos para futuramente ser um desenvolvedor fullstack. Estou
+            cursando Sistemas de informação na PUC Minas mas já havia estudado
+            no COTEMIG e feito técnico de informatica no IFES, e apesar de não
+            ter conseguido terminá-los sempre gostei muito da área!
+          </p>
+        </div>
+      </section>
+
+      <!-- Experiência -->
+      <section class="experiencia" id="experiencia"></section>
+
+      <!-- Projetos -->
+      <section class="projetos" id="projetos"></section>
     </main>
   </body>
 </html>
