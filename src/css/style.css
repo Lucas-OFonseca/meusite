@@ -373,6 +373,14 @@ section h1 {
   margin: 2rem 0;
 }
 
+/* FOOTER ------------------------------------------------------------------------ */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: var(--main-color) 2px solid;
+}
+
 
 /* PERSONALIZAÇÃO DA PAGINA ------------------------------------------------------ */
 ::-webkit-scrollbar-thumb {
