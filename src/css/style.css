@@ -91,15 +91,6 @@ main {
   color: #c4c4c4;
 }
 
-/* PRINCIPAL --------------------------------------------------------------------- */
-.principal {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-  min-height: 60vh;
-}
-
 .principal,
 .about,
 .experiencia,
@@ -107,6 +98,15 @@ main {
 .projetos {
   padding: 6.5% 15%;
   min-height: 35vh;
+}
+
+/* PRINCIPAL --------------------------------------------------------------------- */
+.principal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  min-height: 60vh;
 }
 
 .principal span {
@@ -170,30 +170,42 @@ h2 {
 }
 
 .btn_principal {
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
 }
 
 #btn_git,
 #btn_linkedin {
-  border: 4px solid;
-  border-image: linear-gradient(142deg, #2b2b2b 10%, #651fff 90%) 1;
-  padding: 1em 1.5em;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px 5px;
+  justify-content: space-evenly;
+  width: 160px;
+  border-radius: 8px;
+  position: relative;
+  background-color: #1b1b1b;
+  margin-top: 1rem;
   font-size: 1.2rem;
-  color: var(--main-color);
-  letter-spacing: 3px;
-  font-weight: 800;
-  background: #ffffff;
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: auto;
+  letter-spacing: 2px;
+  height: 45px;
+  color: #c4c4c4;
 }
 
 .img_btn {
   width: 22px;
-  padding-right: 15px;
+  padding-right: 10px;
   vertical-align: bottom;
+}
+
+#btn_git::before,
+#btn_linkedin::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2px;
+  border-radius: 9px;
+  background: linear-gradient(to top left, var(--main-color), #2b2b2b);
+  background-size: 100%;
 }
 
 /* ABOUT ------------------------------------------------------------------------- */
@@ -294,7 +306,6 @@ h2 {
   flex-wrap: wrap;
   gap: 60px;
   justify-content: center;
-  padding-left: 50px;
 }
 
 
@@ -379,6 +390,17 @@ section h1 {
 }
 
 /* MOBILE ------------------------------------------------------------------------ */
+@media (max-width: 1325px) {
+
+  .principal,
+  .sobre-mim,
+  .experiencia,
+  .skills,
+  .projetos {
+    padding: 6.5%;
+  }
+}
+
 @media (max-width: 880px) {
   #navbar-toggler {
     display: flex;
