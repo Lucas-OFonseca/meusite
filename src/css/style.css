@@ -231,6 +231,14 @@ h2 {
 #img_eu {
   border-left: var(--main-color) 3px solid;
   width: 100%;
+  filter: opacity(70%);
+  transition: 0.2s;
+}
+
+#img_eu:hover {
+  border-left: var(--secondary-color) 3px solid;
+  filter: opacity(100%);
+  background-color: #1b1b1b;
 }
 
 .img_about {
@@ -362,6 +370,13 @@ section h1 {
   border-left: 5px solid var(--main-color);
   width: 100%;
   transition: 0.5s;
+  filter: opacity(70%);
+}
+
+.imgCardProjetos:hover{
+  border-left: 5px solid var(--secondary-color);
+  transform: scale(1.1);
+  filter: opacity(100%);
 }
 
 .CardProjetos h2 {
